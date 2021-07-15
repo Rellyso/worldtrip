@@ -1,24 +1,17 @@
-import { Flex, FlexProps } from "@chakra-ui/react";
-import { ReactNode } from "react";
+import { Box, BoxProps } from "@chakra-ui/react";
 
-interface ContainerProps extends FlexProps {
-  children: ReactNode,
-}
+type ContainerProps = BoxProps
 
-export function Container({ children, ...rest }: ContainerProps) {
+export function Container({ ...rest }: ContainerProps) {
   return (
-    <Flex
-      justify="center"
+    <Box
+      w="100%"
+      maxW={1440}
+      mx="auto"
       align="center"
-
-      m="0"
-      p="0"
-
-      w="100vw"
-      maxW="1440px"
+      bg="heading.white"
       {...rest}
-    >
-      {children}
-    </Flex>
+    />
+
   )
 }
