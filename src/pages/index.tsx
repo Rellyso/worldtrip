@@ -1,5 +1,6 @@
 import { Divider, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import { Container } from '../components/Container'
+import { Header } from '../components/Header'
 import { Slider } from '../components/Slider'
 import { TravelTypeCard } from '../components/TravelTypeCard'
 
@@ -7,18 +8,7 @@ import { TravelTypeCard } from '../components/TravelTypeCard'
 export default function Home() {
   return (
     <Flex direction="column">
-      <Flex
-        as="header"
-        h={100}
-        bg="heading.white"
-        w="100%"
-        m="0"
-        p="0"
-        align="center"
-        justify="center"
-      >
-        <Image src="assets/logo.svg" />
-      </Flex>
+      <Header />
 
       <Container>
         <Flex
@@ -95,7 +85,7 @@ export default function Home() {
               {
                 name: 'Europa',
                 description: 'O continente mais antigo',
-                image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
+                image: 'https://images.unsplash.com/photo-1491557345352-5929e343eb89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
               },
             ]}
           />
