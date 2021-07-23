@@ -1,5 +1,9 @@
+import { Container } from "../../components/Container";
+
 export default function Continents() {
   return (
-    <div></div>
+    <Container>
+      Continent
+    </Container>
   )
 }
