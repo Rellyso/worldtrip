@@ -3,9 +3,13 @@ import { Container } from '../components/Container'
 import { Header } from '../components/Header'
 import { Slider } from '../components/Slider'
 import { TravelTypeCard } from '../components/TravelTypeCard'
+import { useContinents } from '../hooks/useContinents'
 
 
 export default function Home() {
+
+  const { continents } = useContinents()
+
   return (
     <Flex direction="column">
       <Header />
@@ -18,9 +22,9 @@ export default function Home() {
           minH="300px"
           position="relative"
           bgImg="assets/images/sky-background.png"
-          bgAttachment="fixed"
+          // bgAttachment="fixed"
           bgRepeat="no-repeat"
-          bgSize="contain"
+          bgSize="cover"
           bgPosition="top center"
           px={140}
           color="white"
@@ -75,23 +79,12 @@ export default function Home() {
             Então escolha seu continente
           </Heading>
 
-          <Slider
-            continents={[
-              {
-                name: 'América do Norte',
-                description: 'O continente do desenvolvimento',
-                image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
-              },
-              {
-                name: 'Europa',
-                description: 'O continente mais antigo',
-                image: 'https://images.unsplash.com/photo-1491557345352-5929e343eb89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
-              },
-            ]}
-          />
+          {continents && (
+            <Slider
+              continents={continents}
+            />
+          )}
         </Flex>
-
-
       </Container>
     </Flex >
   )
