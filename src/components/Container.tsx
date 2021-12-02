@@ -9,7 +9,8 @@ export function Container({ ...rest }: ContainerProps) {
       maxW={1440}
       mx="auto"
       align="center"
-      bg="heading.white"
+      bg="heading.light"
+      minH="100vh"
       {...rest}
     />
 

@@ -3,15 +3,12 @@ import { Flex, Heading, Text, VStack } from '@chakra-ui/react';
 
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Continent } from '../services/mirage';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 type SliderProps = {
-  continents: {
-    name: string;
-    description: string;
-    image: string;
-  }[]
+  continents: Continent[];
 }
 
 export function Slider({ continents }: SliderProps) {
@@ -30,12 +27,12 @@ export function Slider({ continents }: SliderProps) {
         }}
         style={{ width: '100%', flex: 1 }}
       >
-        {continents.map(continent => (
+        {continents?.map(continent => (
           <SwiperSlide key={continent.name.split('').join('-')}>
             <Flex
               w="100%"
               h="100%"
-              bgImg={continent.image}
+              bgImg={continent.banner}
               bgRepeat="no-repeat"
               bgSize="cover"
               bgPosition="center"
@@ -54,7 +51,7 @@ export function Slider({ continents }: SliderProps) {
                 >
                   <VStack spacing="4">
                     <Heading fontSize="48px">{continent.name}</Heading>
-                    <Text fontSize="24px" fontWeight="bold">{continent.description}</Text>
+                    <Text fontSize="24px" fontWeight="bold">{continent.short}</Text>
                   </VStack>
                 </Flex>
               </Link>

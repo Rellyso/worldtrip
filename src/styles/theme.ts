@@ -19,6 +19,7 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
+        bg: 'heading.light',
         padding: 0,
         margin: 0,
       }
