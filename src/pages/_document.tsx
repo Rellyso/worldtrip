@@ -9,6 +9,7 @@ export default class MyDocument extends NextDocument {
       <Html>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="shortcut icon" href="/assets/airplane.svg" type="image/svg" />
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         </Head>
 
