@@ -19,7 +19,7 @@ export function Header() {
       h={100}
       bg="heading.light"
       w="100%"
-      maxW={1440}
+      // maxW={1440}
       mx="auto"
       p="0"
       align="center"
