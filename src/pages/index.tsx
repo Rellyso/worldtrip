@@ -4,6 +4,7 @@ import { Header } from '../components/Header'
 import { Slider } from '../components/Slider'
 import { TravelTypeCard } from '../components/TravelTypeCard'
 import { useContinents } from '../hooks/useContinents'
+import Head from 'next/head'
 
 
 export default function Home() {
@@ -12,6 +13,11 @@ export default function Home() {
 
   return (
     <Flex direction="column">
+
+      <Head>
+        <title>World Trip</title>
+      </Head>
+
       <Header />
 
       <Container>
@@ -19,7 +25,7 @@ export default function Home() {
           as="main"
           w="100%"
           bg="white"
-          minH="300px"
+          h="335px"
           position="relative"
           bgImg="assets/images/sky-background.png"
           // bgAttachment="fixed"
@@ -54,7 +60,7 @@ export default function Home() {
             alt="Avião"
             position="absolute"
             right="140px"
-            top="76px"
+            bottom="-34px"
             h="270px"
           />
         </Flex>
