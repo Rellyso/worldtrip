@@ -24,45 +24,51 @@ export default function Home() {
         <Flex
           as="main"
           w="100%"
-          bg="white"
           h="335px"
-          position="relative"
           bgImg="assets/images/sky-background.png"
           // bgAttachment="fixed"
           bgRepeat="no-repeat"
           bgSize="cover"
           bgPosition="top center"
-          px={140}
-          color="white"
         >
-          <Stack
-            spacing="6"
-            pt="20"
+          <Flex
+            w="100%"
+            maxW={1440}
+            mx="auto"
+            h="100%"
+            position="relative"
+            px={140}
+            color="white"
           >
-            <Heading
-              as="h1"
-              fontWeight="md"
-              maxW={416}
-              fontSize={36}
-              alignSelf="start"
-              textAlign="left"
+            <Stack
+              spacing="6"
+              pt="20"
             >
-              5 Continentes, infinitas possibilidades.
-            </Heading>
+              <Heading
+                as="h1"
+                fontWeight="md"
+                maxW={416}
+                fontSize={36}
+                alignSelf="start"
+                textAlign="left"
+              >
+                5 Continentes, infinitas possibilidades.
+              </Heading>
 
-            <Text color="gray.300" fontSize={20} maxW={524} align="left">
-              Chegou a hora de tirar do papel a viagem que você sempre sonhou.
-            </Text>
-          </Stack>
+              <Text color="gray.300" fontSize={20} maxW={524} align="left">
+                Chegou a hora de tirar do papel a viagem que você sempre sonhou.
+              </Text>
+            </Stack>
 
-          <Image
-            src="assets/airplane.svg"
-            alt="Avião"
-            position="absolute"
-            right="140px"
-            bottom="-34px"
-            h="270px"
-          />
+            <Image
+              src="assets/airplane.svg"
+              alt="Avião"
+              position="absolute"
+              right="140px"
+              bottom="-34px"
+              h="270px"
+            />
+          </Flex>
         </Flex>
 
         <Flex as="section" py="24" px="24" justify="space-around">
