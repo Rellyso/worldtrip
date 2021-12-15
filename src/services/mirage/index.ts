@@ -159,6 +159,18 @@ export function makeServer() {
       this.get('/continents')
       this.post('/continents')
 
+      this.get('/continents/:slug', (continentSchema, request) => {
+        const { slug } = request.params
+        let queryAttrs = {
+          slug: slug
+        }
+
+        return continentSchema.where("continent", (continent) => {
+          console.log(continent)
+          return continent.attrs === queryAttrs
+        })
+      })
+
       // this.post('api/continents', (schema, request) => {
       //   const data = JSON.parse(request.requestBody)
 
