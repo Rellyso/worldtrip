@@ -19,22 +19,29 @@ export function Header() {
       h={100}
       bg="heading.light"
       w="100%"
-      // maxW={1440}
-      mx="auto"
-      p="0"
-      align="center"
-      justify="center"
-      position="relative"
-    >
-      {pathname !== "/" && (
-        <Link href="/" h="100%" position="absolute" left="4" alignItems="center">
-          <ChevronLeftIcon fontSize="32px" color="heading.dark" />
-        </Link>
-      )}
 
-      <Link href="/" alignItems="center">
-        <Image src="/assets/logo.svg" />
-      </Link>
+
+    >
+      <Flex
+        w="100%"
+        maxW={1440}
+        mx="auto"
+
+        p="0"
+        align="center"
+        justify="center"
+        position="relative"
+      >
+        {pathname !== "/" && (
+          <Link href="/" h="100%" position="absolute" left="4" alignItems="center">
+            <ChevronLeftIcon fontSize="32px" color="heading.dark" />
+          </Link>
+        )}
+
+        <Link href="/" alignItems="center">
+          <Image src="/assets/logo.svg" />
+        </Link>
+      </Flex>
     </Flex>
   )
 }

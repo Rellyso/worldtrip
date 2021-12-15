@@ -37,7 +37,7 @@ export function Slider({ continents }: SliderProps) {
               bgSize="cover"
               bgPosition="center"
             >
-              <Link href="continent/north-america">
+              <Link href={`continent/${continent.slug}`}>
                 <Flex
                   as="a"
                   w="100%"
