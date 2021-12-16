@@ -1,24 +1,6 @@
 import { ActiveModelSerializer, createServer, Factory, Model } from 'miragejs'
+import { Continent } from '../../models/continent'
 
-export type Cities = {
-  name: string;
-  image: string;
-  country: string;
-  country_flag: string;
-}
-
-export type Continent = {
-  id: number;
-  slug: string;
-  name: string;
-  short: string;
-  description: string;
-  banner: string;
-  country_count: number;
-  language_count: number;
-  city_count: number;
-  cities: Cities[];
-}
 
 export function makeServer() {
   const server = createServer({
@@ -44,9 +26,9 @@ export function makeServer() {
         cities: [
           {
             name: 'New York',
-            image: '',
+            image: 'https://images.unsplash.com/photo-1581430872221-d1cfed785922?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
             country: 'Estados Unidos',
-            country_flag: '',
+            country_flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/255px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
           }
         ]
       } as Object)
@@ -64,9 +46,9 @@ export function makeServer() {
         cities: [
           {
             name: 'Madrid',
-            image: '',
+            image: 'https://images.unsplash.com/photo-1581430872221-d1cfed785922?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
             country: 'Espanha',
-            country_flag: '',
+            country_flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/255px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
           }
         ]
       } as Object)
@@ -84,9 +66,9 @@ export function makeServer() {
         cities: [
           {
             name: 'Madrid',
-            image: '',
+            image: 'https://images.unsplash.com/photo-1581430872221-d1cfed785922?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
             country: 'Espanha',
-            country_flag: '',
+            country_flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/255px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
           }
         ]
       } as Object)
@@ -104,9 +86,9 @@ export function makeServer() {
         cities: [
           {
             name: 'Madrid',
-            image: '',
+            image: 'https://images.unsplash.com/photo-1581430872221-d1cfed785922?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
             country: 'Espanha',
-            country_flag: '',
+            country_flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/255px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
           }
         ]
       } as Object)
@@ -124,9 +106,9 @@ export function makeServer() {
         cities: [
           {
             name: 'Madrid',
-            image: '',
+            image: 'https://images.unsplash.com/photo-1581430872221-d1cfed785922?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
             country: 'Espanha',
-            country_flag: '',
+            country_flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/255px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
           }
         ]
       } as Object)
@@ -144,9 +126,9 @@ export function makeServer() {
         cities: [
           {
             name: 'Madrid',
-            image: '',
+            image: 'https://images.unsplash.com/photo-1581430872221-d1cfed785922?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
             country: 'Espanha',
-            country_flag: '',
+            country_flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/255px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
           }
         ]
       } as Object)
@@ -159,17 +141,6 @@ export function makeServer() {
       this.get('/continents')
       this.post('/continents')
 
-      this.get('/continents/:slug', (continentSchema, request) => {
-        const { slug } = request.params
-        let queryAttrs = {
-          slug: slug
-        }
-
-        return continentSchema.where("continent", (continent) => {
-          console.log(continent)
-          return continent.attrs === queryAttrs
-        })
-      })
 
       // this.post('api/continents', (schema, request) => {
       //   const data = JSON.parse(request.requestBody)
