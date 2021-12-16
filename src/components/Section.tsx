@@ -8,7 +8,7 @@ export function Section({ children, ...rest }: FlexProps) {
       w="100%"
       px="4"
       mx="auto"
-      mt="20"
+      mt={["6", "6", "20"]}
       {...rest}
     >
       {children}

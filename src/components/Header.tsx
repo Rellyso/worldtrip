@@ -16,7 +16,7 @@ export function Header() {
   return (
     <Flex
       as="header"
-      h={100}
+      h={["16", "16", 100]}
       bg="heading.light"
       w="100%"
     >
@@ -32,12 +32,12 @@ export function Header() {
       >
         {pathname !== "/" && (
           <Link href="/" h="100%" position="absolute" left="4" alignItems="center">
-            <ChevronLeftIcon fontSize="32px" color="heading.dark" />
+            <ChevronLeftIcon fontSize={["24px", "24px", "32px"]} color="heading.dark" />
           </Link>
         )}
 
         <Link href="/" alignItems="center">
-          <Image src="/assets/logo.svg" />
+          <Image src="/assets/logo.svg" h={["28px", "28px", 46]} />
         </Link>
       </Flex>
     </Flex>

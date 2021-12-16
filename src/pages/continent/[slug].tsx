@@ -40,9 +40,9 @@ export default function ContinentPage({ slug }) {
       <ContinentHero banner={continent.banner} title={continent.name} />
 
       <Section>
-        <SimpleGrid columns={2} spacing={14}>
+        <SimpleGrid columns={[1, 1, 2]} spacing={[8, 8, 14]}>
           {continent.description ? (
-            <Text textAlign="justify" fontSize="lg">
+            <Text textAlign="justify" fontSize={["md", "md", "lg"]}>
               {continent.description}
             </Text>
           ) : (
@@ -67,9 +67,9 @@ export default function ContinentPage({ slug }) {
       </Section>
 
       <Section direction="column" align="start" pb="10">
-        <Heading fontWeight="medium" color="gray.500">Cidades +100</Heading>
+        <Heading fontWeight="medium" color="gray.600">Cidades +100</Heading>
 
-        <Stack spacing="10" mt="10">
+        <Stack w="100%" spacing={["6", "6", "8"]} mt={["6", "6", "10"]}>
           {continent.cities?.length > 0 ? continent.cities.map(city => (
             <CityCard
               city={city.name}

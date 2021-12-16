@@ -32,7 +32,7 @@ export function CityCard({ city, country, city_banner, country_flag }: Props) {
       </Box>
       <Flex
         justify="space-between"
-        px="4"
+        px="6"
         align="center"
         h="40%"
         borderWidth="2px"
@@ -47,7 +47,7 @@ export function CityCard({ city, country, city_banner, country_flag }: Props) {
           <Text fontSize="16" color="darkInfo">{country}</Text>
         </Box>
 
-        <Image w="14" h="14" rounded="full" objectFit="cover" src={country_flag} />
+        <Image w={["10", "10", "14"]} h={["10", "10", "14"]} rounded="full" objectFit="cover" src={country_flag} />
       </Flex>
     </Box>
   )

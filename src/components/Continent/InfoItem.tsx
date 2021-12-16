@@ -11,9 +11,22 @@ type Props = {
 
 export function InfoItem({ children, count, ...rest }: Props) {
   return (
-    <Box {...rest}>
-      <Heading as="span" fontSize="5xl" color="highlight">{count}</Heading>
-      <Text fontWeight="semibold" fontSize="xl" color="gray.600">{children}</Text>
-    </Box>
+    <Box textAlign={["left", "left", "center"]} justifySelf={["flex-start", "flex-start", "center"]} {...rest}>
+      <Heading
+        fontWeight={["semibold", "semibold", "bold"]}
+        fontSize={["3xl", "3xl", "5xl"]}
+        color="highlight"
+        as="span"
+      >
+        {count}
+      </Heading>
+      <Text
+        fontWeight={["regular", "regular", "semibold"]}
+        fontSize="xl"
+        color="gray.600"
+      >
+        {children}
+      </Text>
+    </Box >
   )
 }

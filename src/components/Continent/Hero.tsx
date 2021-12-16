@@ -15,7 +15,7 @@ export function ContinentHero({ banner, title }: Props) {
         backgroundSize="cover"
         backgroundPosition="center"
         w="100%"
-        h="500px"
+        h={["250px", "250px", "500px"]}
         position="relative"
         _after={{
           content: `""`,
@@ -33,10 +33,10 @@ export function ContinentHero({ banner, title }: Props) {
           px="4"
           py="16"
           mx="auto"
-          align="end"
-          justify="start"
+          align={["center", "center", "end"]}
+          justify={["center", "center", "start"]}
         >
-          <Heading color="white" zIndex={4}>{title}</Heading>
+          <Heading fontWeight="semibold" fontSize={["3xl", "3xl", "5xl"]} color="white" zIndex={4}>{title}</Heading>
         </Flex>
       </Flex>
     </Skeleton>

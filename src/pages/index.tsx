@@ -1,4 +1,4 @@
-import { Divider, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
+import { Divider, Flex, Heading, Image, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
 import { Container } from '../components/Container'
 import { Header } from '../components/Header'
 import { Slider } from '../components/Slider'
@@ -10,6 +10,12 @@ import Head from 'next/head'
 export default function Home() {
 
   const { continents } = useContinents()
+
+  const isMobile = useBreakpointValue({
+    base: true,
+    md: false,
+    lg: false,
+  })
 
   return (
     <Flex direction="column">
@@ -37,7 +43,7 @@ export default function Home() {
             mx="auto"
             h="100%"
             position="relative"
-            px={140}
+            px={["8", "8", "8", 140]}
             color="white"
           >
             <Stack
@@ -47,7 +53,7 @@ export default function Home() {
               <Heading
                 as="h1"
                 fontWeight="md"
-                maxW={416}
+                maxW={["100%", "100%", 416]}
                 fontSize={36}
                 alignSelf="start"
                 textAlign="left"
@@ -60,18 +66,21 @@ export default function Home() {
               </Text>
             </Stack>
 
-            <Image
-              src="assets/airplane.svg"
-              alt="Avião"
-              position="absolute"
-              right="140px"
-              bottom="-34px"
-              h="270px"
-            />
+            {
+              !isMobile && <Image
+                src="assets/airplane.svg"
+                alt="Avião"
+                position="absolute"
+                right={["20", "20", "10", "140px"]}
+                bottom={["20", "20", "-60px", "-60px", "-34px"]}
+                h={["160px", "270px"]}
+              />
+            }
+
           </Flex>
         </Flex>
 
-        <Flex mx="auto" maxW="8xl" as="section" py="24" px="24" justify="space-around">
+        <Flex mx="auto" maxW="8xl" as="section" py="24" px="24" justify="space-around" gridGap="8" flexWrap="wrap">
           <TravelTypeCard src="assets/cocktail.svg">vida noturna</TravelTypeCard>
           <TravelTypeCard src="assets/surf.svg">praia</TravelTypeCard>
           <TravelTypeCard src="assets/building.svg">moderno</TravelTypeCard>
