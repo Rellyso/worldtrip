@@ -19,12 +19,10 @@ export function Header() {
       h={100}
       bg="heading.light"
       w="100%"
-
-
     >
       <Flex
         w="100%"
-        maxW={1440}
+        maxW="8xl"
         mx="auto"
 
         p="0"

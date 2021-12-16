@@ -3,7 +3,7 @@ import { Flex, Heading, Text, VStack } from '@chakra-ui/react';
 
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Continent } from '../services/mirage';
+import { Continent } from '../models/continent';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
@@ -13,7 +13,7 @@ type SliderProps = {
 
 export function Slider({ continents }: SliderProps) {
   return (
-    <Flex w="100%" h={["250px", "450px"]} maxW="1240px" mx="auto" mb={["5", "10"]}>
+    <Flex w="100%" h={["250px", "450px"]} maxW="8xl" mx="auto" mb={["5", "10"]}>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
