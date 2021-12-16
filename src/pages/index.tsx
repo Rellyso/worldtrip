@@ -33,7 +33,7 @@ export default function Home() {
         >
           <Flex
             w="100%"
-            maxW={1440}
+            maxW="8xl"
             mx="auto"
             h="100%"
             position="relative"
@@ -71,7 +71,7 @@ export default function Home() {
           </Flex>
         </Flex>
 
-        <Flex as="section" py="24" px="24" justify="space-around">
+        <Flex mx="auto" maxW="8xl" as="section" py="24" px="24" justify="space-around">
           <TravelTypeCard src="assets/cocktail.svg">vida noturna</TravelTypeCard>
           <TravelTypeCard src="assets/surf.svg">praia</TravelTypeCard>
           <TravelTypeCard src="assets/building.svg">moderno</TravelTypeCard>
