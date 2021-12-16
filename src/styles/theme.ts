@@ -14,6 +14,7 @@ const theme = extendTheme({
       light: "#F5F8FA",
       dark: "#47585B",
     },
+    darkInfo: "#999999",
     highlight: "#FFBA08",
   },
   styles: {
